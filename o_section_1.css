@@ -1,0 +1,79 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Pour un arrière-plan léger */
+  }
+  
+  /* Section principale */
+  .o_section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer la section */
+  }
+  
+  /* Style pour chaque bloc */
+  .o_section1 > div {
+    flex: 1 1 calc(25% - 20px); /* 4 colonnes avec un espace entre elles */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .o_section1 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Images */
+  .o_section1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Titres */
+  .o_section1 h2 {
+    font-size: 1.2rem;
+    color: #0073b7; /* Bleu pour le titre */
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraphes */
+  .o_section1 p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 992px) {
+    .o_section1 > div {
+      flex: 1 1 calc(50% - 20px); /* 2 colonnes sur tablettes */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .o_section1 {
+      flex-direction: column;
+    }
+  
+    .o_section1 > div {
+      flex: 1 1 100%; /* Une seule colonne sur mobile */
+    }
+  }
